@@ -133,6 +133,7 @@ deb8 ()	{
 	# read -e -p "Your desired username: " usrn
 	# Creating user with username from $usrn and asking user to set a password
 	# htpasswd -c /etc/squid3/passwd $usrn
+	htpasswd -b -c /etc/squid3/passwd datlyfe tho
 	# Downloading Squid configuration
 	wget -O /etc/squid3/squid.conf https://raw.githubusercontent.com/hidden-refuge/squid-proxy-installer/master/spi-jessie.conf --no-check-certificate
 	# Creating empty blacklist.acl file for further blacklisting entries
